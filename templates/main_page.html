@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+</head>
+<body>
+    <div id="main">
+        <center>
+    <h1>Guessing Game</h1>
+    <p class="p1">I am thinking of a number between 1 and 1000</p>
+    <p>You have 10 guess, Take a guess!</p>
+    {% if 'guess' in session%}
+            <p>Your old guess is {{session['guess']}}</p>
+    {% endif%}
+
+    {% if session['count'] == 1%}
+       <h3>You have 9 countes left</h3>
+    {% elif session['count'] == 2%}
+      <h3>You have 8 countes left</h3>
+    {% elif session['count'] == 3%}
+      <h3>You have 7 countes left</h3>
+    {% elif session['count'] == 4%}
+      <h3>You have 6 countes left</h3>
+    {% elif session['count'] == 5%}
+      <h3>You have 5 countes left</h3>
+    {% elif session['count'] == 6%}
+      <h3>You have 4 countes left</h3>
+    {% elif session['count'] == 7%}
+      <h3>You have 3 countes left</h3>
+    {% elif session['count'] == 8%}
+      <h3>You have 2 countes left</h3>
+    {% elif session['count'] == 9%}
+      <h3>You have 1 countes left</h3>
+    {% elif session['count'] == 10%}
+      <h3>You have 0 guesses left</h3>
+    {% endif%}
+
+    {% if session['count'] >= 10%}
+            <h5>no more guess</h5>
+    {%else%}
+        <form action="/guessed" method="post">
+        <label for="guess"> Your Guess:</label>
+        <input type="number" name="guess" >
+        
+          <input type="submit"submit id="btn">
+         </form>
+    {% endif%}
+
+    <div class="subBox" >
+      {%if session['high_or_low'] == '.rightNUm'%}
+        <div class="rightNUm">{{session['guess']}} is the right number</div>
+      {%elif session['high_or_low'] == '.fivehunOver'%}
+        <div class="fivehunOver">{{session['guess']}} (greater)> is way WAY TO HIGH</div>
+      
+      {%elif session['high_or_low'] == '.hunOver'%}
+        <div class="hunOver">{{session['guess']}} (greater)> is WAY TO HIGH</div>
+      
+      {%elif session['high_or_low'] == '.fifthOver'%}
+        <div class="fifthOver">{{session['guess']}} (greater)> is TO HIGH</div>
+      
+      
+      {%elif session['high_or_low'] == '.twotiOVer'%}
+        <div class="twotiOVer">{{session['guess']}} (greater)> almost right! </div>
+      
+      
+      {%elif session['high_or_low'] == '.tenOVer'%}
+        <div class="tenOVer">{{session['guess']}} (greater)> So close</div>
+
+      {%elif session['high_or_low'] == '.fivehunUnder'%}
+        <div class="fivehunUnder">{{session['guess']}} (less)< is way WAY TO LOW</div>
+      
+      {%elif session['high_or_low'] == '.hunUnder'%}
+        <div class="hunUnder">{{session['guess']}} (less)< is WAY TO LOW</div>
+      
+      {%elif session['high_or_low'] == '.fifthUnder'%}
+        <div class="fifthUnder">{{session['guess']}} (less)< is TO LOW</div>
+      
+      
+      {%elif session['high_or_low'] == '.twotiUnder'%}
+        <div class="twotiUnder">{{session['guess']}} (less)< almost right! </div>
+      
+      
+      {%elif session['high_or_low'] == '.tenUnder'%}
+        <div class="tenUnder">{{session['guess']}} (less)< So close</div>
+      
+      
+      
+      
+      
+      
+      
+      {%endif%}
+        <br>
+
+        <form action="/delete_data" method="get">
+            <button name="delete">Delete Data</button>
+        </form>
+    </div>
+        </center>
+    </div>
+</body>
+</html>

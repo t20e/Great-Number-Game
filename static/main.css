@@ -1,0 +1,159 @@
+:root{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#main{
+    background-color: bisque;
+    height: 450px;
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+.p1{
+    font-size: smaller;
+}
+
+#btn{
+    border-radius: 50px;
+    background-color: sandybrown;
+    margin-top: 10px;
+}
+button{
+    background-color: sandybrown;
+    border-radius: 50px;
+}
+
+.subBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 200px;
+    display: block;
+}
+
+.fivehunOver{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #750000;
+}
+
+.hunOver{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #A30000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifthOver{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.twotiOVer{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #013220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tenOVer{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #228C22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rightNUm{
+    color: white;
+    margin-top: 10px;
+    background-color: #7CFC00;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+/* BELOW  */
+
+.fivehunUnder{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #750000;
+}
+
+.hunUnder{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #A30000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fifthUnder{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #FF0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.twotiUnder{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #013220;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tenUnder{
+    color: white;
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    background-color: #228C22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
